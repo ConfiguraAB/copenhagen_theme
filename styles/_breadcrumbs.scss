@@ -17,7 +17,7 @@
     text-overflow: ellipsis;
 
     + li::before {
-      content: ">";
+      content: "/";
       margin: 0 4px;
     }
     a:visited {
