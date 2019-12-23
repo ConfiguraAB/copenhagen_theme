@@ -1,0 +1,143 @@
+/*********************************************************
+ * Row
+ *********************************************************/
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+}
+
+.row.mod-no-gutter {
+	@extend %no-margin;
+	> .col,
+	> [class*="col-"] {
+		@extend %no-padding;
+	}
+}
+
+.row.mod-no-margin {
+	@extend %no-margin;
+}
+
+/*********************************************************
+ * Columns
+ *********************************************************/
+
+.col {
+	@extend %column;
+	display: inline-block;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
+	max-width: 100%;
+
+	&.mod-auto {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		width: auto;
+	}
+	/**
+	* is-X and is-X-on-sm is the same since mobile first
+	**/
+	@for $i from 1 through $columns {
+		$percentage: percentage($i / $columns);
+		&.is-#{$i} {
+			@include set-col-width($percentage);
+		}
+		&.is-offset-#{$i} {
+			margin-left: $percentage;
+		}
+		&.push-#{$i} {
+			left: $percentage;
+		}
+		&.pull-#{$i} {
+			right: $percentage;
+		}
+		&.is-#{$i}-on-xs {
+			@include set-col-width($percentage);
+		}
+		&.is-offset-#{$i}-on-xs {
+			margin-left: $percentage;
+		}
+		&.push-#{$i}-on-xs {
+			left: $percentage;
+		}
+		&.pull-#{$i}-on-xs {
+			right: $percentage;
+		}
+	}
+	/**
+	* Then query viewport and override for sm, md, lg and xl
+	**/
+	@include media-min-sm {
+		@for $i from 1 through $columns {
+			$percentage: percentage($i / $columns);
+			&.is-#{$i}-on-sm {
+				@include set-col-width($percentage);
+			}
+			&.is-offset-#{$i}-on-sm {
+				margin-left: $percentage;
+			}
+			&.push-#{$i}-on-sm {
+				left: $percentage;
+			}
+			&.pull-#{$i}-on-sm {
+				right: $percentage;
+			}
+		}
+	}
+	@include media-min-md {
+		@for $i from 1 through $columns {
+			$percentage: percentage($i / $columns);
+			&.is-#{$i}-on-md {
+				@include set-col-width($percentage);
+			}
+			&.is-offset-#{$i}-on-md {
+				margin-left: $percentage;
+			}
+			&.push-#{$i}-on-md {
+				left: $percentage;
+			}
+			&.pull-#{$i}-on-md {
+				right: $percentage;
+			}
+		}
+	}
+	@include media-min-lg {
+		@for $i from 1 through $columns {
+			$percentage: percentage($i / $columns);
+			&.is-#{$i}-on-lg {
+				@include set-col-width($percentage);
+			}
+			&.is-offset-#{$i}-on-lg {
+				margin-left: $percentage;
+			}
+			&.push-#{$i}-on-lg {
+				left: $percentage;
+			}
+			&.pull-#{$i}-on-lg {
+				right: $percentage;
+			}
+		}
+	}
+	@include media-min-xl {
+		@for $i from 1 through $columns {
+			$percentage: percentage($i / $columns);
+			&.is-#{$i}-on-xl {
+				@include set-col-width($percentage);
+			}
+			&.is-offset-#{$i}-on-xl {
+				margin-left: $percentage;
+			}
+			&.push-#{$i}-on-xl {
+				left: $percentage;
+			}
+			&.pull-#{$i}-on-xl {
+				right: $percentage;
+			}
+		}
+	}
+}
