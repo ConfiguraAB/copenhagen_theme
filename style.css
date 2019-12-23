@@ -425,7 +425,6 @@ ul {
 
 /***** Header *****/
 .header {
-  max-width: 1160px;
   margin: 0 auto;
   padding: 0 5%;
   position: relative;
@@ -1230,13 +1229,14 @@ ul {
     flex: 1 0 66%;
     max-width: 66%;
     min-width: 640px;
-    padding: 0 30px;
+    margin-right: 4rem;
   }
 }
 
 .article-container {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -4552,7 +4552,6 @@ h1, h2 {
 /* Big screen friendly */
 @media (min-width: 1160px) {
   .custom-header {
-  	max-width: 96em;
     margin: 0 6%;
   }
 }
@@ -4715,8 +4714,8 @@ h1, h2 {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -$gutter;
-	margin-right: -$gutter;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }
 .custom-copyright-container a {
   color: var(--color-white);
