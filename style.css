@@ -149,7 +149,7 @@ textarea:focus {
 @media (min-width: 1160px) {
   .container {
     padding: 0;
-    width: 90%;
+    width: 80%;
   }
 }
 
@@ -741,7 +741,7 @@ input[type="submit"][disabled] {
 }
 
 .breadcrumbs li a:visited {
-  color: $link_color;
+  color: $link_color;a
 }
 
 /***** Search field *****/
@@ -750,8 +750,8 @@ input[type="submit"][disabled] {
 }
 
 .search input[type="search"] {
-  border: 1px solid #ddd;
-  border-radius: 30px;
+  border: 1px solid #006ab3;
+  /* border-radius: 30px; */
   box-sizing: border-box;
   color: #999;
   height: 40px;
@@ -870,7 +870,8 @@ input[type="submit"][disabled] {
   flex-direction: column;
   justify-content: space-between;
   min-height: 3rem;
-  padding: 2rem;
+  padding: 2rem 0;
+  max-width: 70rem;
 }
 
 @media (min-width: 768px) {
@@ -882,7 +883,7 @@ input[type="submit"][disabled] {
 
 @media (min-width: 768px) {
   .sub-nav input[type="search"] {
-    min-width: 300px;
+    min-width: 23rem;
   }
 }
 
@@ -1302,16 +1303,16 @@ input[type="submit"][disabled] {
 @media (min-width: 1024px) {
   .article {
     flex: 1 0 66%;
-    max-width: 66%;
+    max-width: 640px;
     min-width: 640px;
-    margin-right: 5rem;
+    margin-right: 7rem;
   }
 }
 
 .article-container {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 @media (min-width: 1024px) {
@@ -1489,6 +1490,7 @@ input[type="submit"][disabled] {
     border: 0;
     flex: 0 0 17%;
     height: auto;
+    padding-top: 1rem;
   }
 }
 
@@ -4339,6 +4341,7 @@ html[lang|="ja"] .search-result-description em {
   --color-almost-black: #424242;
   --color-blue: #006ab3;
   --color-blue-link: #0072ef;
+  font-size: 16px;
 }
 
 h1,
@@ -4348,7 +4351,7 @@ h2 {
 
 /* Custom container on category and section page*/
 .custom-container {
-  margin: 1em 5%;
+  margin: 0 5% 1em 5%;
 }
 
 .custom-category-container,
