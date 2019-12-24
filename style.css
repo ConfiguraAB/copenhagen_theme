@@ -4198,6 +4198,7 @@ h1, h2 {
 /* Custom container on category and section page*/
 .custom-container {
   margin: 1em 5%;
+  margin-left: 17rem;
 }
 
 .custom-category-container, .custom-section-container {
@@ -4539,6 +4540,7 @@ h1, h2 {
 .custom-background-color-blue {
   background-color: var(--color-blue);
   background-color: #006aB3; /* default supported fallback style */
+  z-index: 1;
 }
 
 .custom-header-icon {
@@ -4689,6 +4691,7 @@ h1, h2 {
   color: var(--color-white);
   color: #ffffff; /* default supported fallback style */
   margin-top: 0;
+  z-index: 1;
 }
 
 .custom-footer-inner {
@@ -4831,19 +4834,26 @@ body {
 }
 
 .sidebar-panel {
-  padding: 40px 30px 30px;
-  max-width: 19em;
+  padding: 150px 30px 30px;
+  max-width: 15.5rem;
   background: var(--color-grey);
   background: #f7f6f6; /* default supported fallback style */
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
+  position: fixed;
+  height: 100vh;
+  top: 0;
 }
 
 @media (max-width: 768px) {
   .sidebar-panel {
     display: none;
+  }
+
+  .custom-container {
+    margin-left: 1rem;
   }
 }
 
@@ -4906,6 +4916,7 @@ main.main-sidebar {
   display: block;
   color: #666;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .sidebar-item-link:hover {
