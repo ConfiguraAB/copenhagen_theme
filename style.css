@@ -5122,6 +5122,7 @@ body {
 .sidebar-panel {
   padding: 40px 30px 30px;
   max-width: 19em;
+  min-width: 17em;
   background: var(--color-grey);
   background: #f7f6f6; /* default supported fallback style */
   overflow-x: hidden;
