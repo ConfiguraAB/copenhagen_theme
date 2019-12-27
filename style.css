@@ -490,6 +490,7 @@ input[type="submit"][disabled] {
   padding: 0 5%;
   position: relative;
   align-items: center;
+  max-width: 1370px;
   display: flex;
   height: 71px;
   justify-content: space-between;
