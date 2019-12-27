@@ -1,0 +1,287 @@
+{{!-- <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://secure.logmeinrescue.com/InstantChat/InstantChat.aspx"></script>
+    <style type="text/css">
+        <!--
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin: 10px;
+        }
+
+        input {
+            border: 1px solid #d4d4d4;
+            padding: 2px;
+        }
+
+        .knappen {
+            border: 1px solid #333;
+            background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#f2f2f2));
+            /* for webkit browsers */
+            background: -moz-linear-gradient(top, #999, #f2f2f2);
+            /* for firefox 3.6+ */
+        }
+
+        .blue-button,
+        .blue-button.disabled:hover,
+        .blue-button.disabled:focus {
+            background: rgb(20, 120, 251);
+            /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(20, 120, 251, 1) 0%, rgba(13, 100, 214, 1) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(20, 120, 251, 1)), color-stop(100%, rgba(13, 100, 214, 1)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(20, 120, 251, 1) 0%, rgba(13, 100, 214, 1) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(20, 120, 251, 1) 0%, rgba(13, 100, 214, 1) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(20, 120, 251, 1) 0%, rgba(13, 100, 214, 1) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(20, 120, 251, 1) 0%, rgba(13, 100, 214, 1) 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1478fb', endColorstr='#0d64d6', GradientType=0);
+            /* IE6-9 */
+            border-color: #0d64d6;
+            color: #fff;
+            padding: 4px 10px;
+        }
+
+        .blue-button:hover,
+        .blue-button:focus {
+            background: rgb(20, 120, 251);
+            /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(20, 120, 251, 1) 50%, rgba(13, 100, 214, 1) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(20, 120, 251, 1)), color-stop(100%, rgba(13, 100, 214, 1)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(20, 120, 251, 1) 50%, rgba(13, 100, 214, 1) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(20, 120, 251, 1) 50%, rgba(13, 100, 214, 1) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(20, 120, 251, 1) 50%, rgba(13, 100, 214, 1) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(20, 120, 251, 1) 50%, rgba(13, 100, 214, 1) 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1478fb', endColorstr='#0d64d6', GradientType=0);
+            /* IE6-9 */
+            cursor: pointer;
+        }
+
+        select,
+        input {
+            padding: 3px 9px;
+        }
+        -->
+    </style>
+</head>
+
+<body onload="handleRebootOrRefresh();">
+    <div class="container-divider"></div>
+    <div class="container">
+        <div class="section-container">
+            <section class="section-content">
+                <header class="page-header">
+                    <h1>
+                        Chatt
+                    </h1>
+                </header>
+                <div id="divForm">
+                    <table>
+                        <tr>
+                            <td><span class="stil1">Input your MyConfigura ID or E-mail</span>: </td>
+                            <td><input id="Name" type="text" maxlength="64" value="CET Designer User"
+                                    onfocus="this.select();" class="required" /></td>
+                        </tr>
+
+                        <!-- Email address -->
+                        <input id="Comment1" type="hidden" />
+
+                        <!-- Account number -->
+                        <input id="Comment2" type="hidden" />
+
+                        <!-- Refferer -->
+                        <input id="Comment4" type="hidden" />
+
+                        <tr>
+                            <td>Language</td>
+                            <td>
+
+                                <!-- Language -->
+                                <select id="Comment3" style="font-family:Arial Unicode MS">
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="se">Swedish</option>
+                                    <option value="ge">German</option>
+                                </select>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="button" value="Start chat" onclick="loadInstantChat();" class="blue-button" />
+                </div>
+                <div id="ICContainer"
+                    style="position: absolute; left: 182px; top: 194px; width: 470px; height: 500px; display: none">
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html> --}}
+
+<!-- CUSTOM SIDEBAR -->
+<main class="main-sidebar" role="main">
+    <div id="sidebar" class="sidebar-panel">
+        <ul class="sidebar">
+            <li class="sidebar-item sidebar-home open">
+                <a href="https://www.configura.com/academy/cet-designer" class="custom-sidebar-item-title"
+                    target="_blank">
+                    <i class="material-icons">school</i>
+                    Academy and training
+                </a>
+            </li>
+            <li class="sidebar-item sidebar-home open">
+                <a href="https://www.configura.com/products/system-recommendations/cet-designer"
+                    class="custom-sidebar-item-title" target="_blank">
+                    <i class="material-icons">computer</i>
+                    System recommendations
+                </a>
+            </li>
+            <li class="sidebar-item sidebar-home open">
+                <a href="https://www.configura.com/products/release-notes/cet-designer"
+                    class="custom-sidebar-item-title" target="_blank">
+                    <i class="material-icons">book</i>
+                    Release notes
+                </a>
+            </li>
+            <li class="sidebar-item sidebar-home open custom-margin-bottom">
+                <a href=" https://www.configura.com/my/forum" class="custom-sidebar-item-title" target="_blank">
+                    <i class="material-icons">forum</i>
+                    Forums
+                </a>
+            </li>
+            <li :class="['sidebar-item', isOpen(category.id)]" v-for='category in categories' :data-id='category.id'>
+                <h4 class="sidebar-item-title" @click='setActiveSection(category.id)' v-cloak>{[{category.name}]}</h4>
+                <ul v-if='category.id === activeSection'>
+                    <li :class="['sidebar-item', isCurrent(section.id)]" v-for='section in category.sections'>
+                        <a :href='section.html_url' class="sidebar-item-link">
+                            {[{section.name}]}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- END CUSTOM SIDEBAR -->
+
+    <div class="container-divider"></div>
+    <div class="custom-container container">
+        <nav class="sub-nav">
+            {{breadcrumbs}}
+            {{search scoped=settings.scoped_kb_search submit=false}}
+        </nav>
+        <section class="section-content">
+            <header class="page-header">
+                <h1>
+                    {{section.name}}
+                </h1>
+                {{#if settings.show_follow_section}}
+                {{subscribe}}
+                {{/if}}
+            </header>
+
+            <div>
+                <h2>
+                    Beginner
+                </h2>
+                <div class="custom-card-container">
+                    {{#each section.sections}}
+                    <section class="custom-card">
+                        <a href="{{url}}" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <img class="custom-card-icon" src="{{asset 'bug_report-24px.svg'}}" />
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                        <!-- END CUSTOM CARDS -->
+                        {{#if internal}}
+                        <span class="icon-lock" title="{{t 'internal'}}"></span>
+                        {{/if}}
+                    </section>
+
+
+                    {{/each}}
+                </div>
+
+            </div>
+
+
+            <div>
+                <h2>
+                    Intermediate
+                </h2>
+                <div class="custom-card-container">
+                    {{#each section.sections}}
+                    <section class="custom-card">
+                        <a href="{{url}}" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <img class="custom-card-icon" src="{{asset 'bug_report-24px.svg'}}" />
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                        <!-- END CUSTOM CARDS -->
+                        {{#if internal}}
+                        <span class="icon-lock" title="{{t 'internal'}}"></span>
+                        {{/if}}
+                    </section>
+
+
+                    {{/each}}
+                </div>
+            </div>
+
+
+            <div>
+                <h2>
+                    Advanced
+                </h2>
+                <div class="custom-card-container">
+                    {{#each section.sections}}
+                    <section class="custom-card">
+                        <a href="{{url}}" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <img class="custom-card-icon" src="{{asset 'bug_report-24px.svg'}}" />
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                        <!-- END CUSTOM CARDS -->
+                        {{#if internal}}
+                        <span class="icon-lock" title="{{t 'internal'}}"></span>
+                        {{/if}}
+                    </section>
+
+
+                    {{/each}}
+                </div>
+            </div>
+
+
+
+
+            {{pagination}}
+
+        </section>
+    </div>
+    <script>sidebar.$mount("main");</script>
+</main>
