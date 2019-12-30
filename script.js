@@ -436,7 +436,7 @@ $.get(
 ).done(function(data) {
   $.each(data.articles, function(index, item) {
     var style1 =
-      '<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><p><a href="' +
+      '<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner" styling="display:flex"><span class="megaphone"></span></i><p><a href="' +
       item.html_url +
       '">' +
       item.title +
