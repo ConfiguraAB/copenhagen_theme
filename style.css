@@ -504,6 +504,7 @@ input[type="submit"][disabled] {
 }
 
 .logo img {
+  height: 2rem;
   max-height: 37px;
 }
 
@@ -4365,6 +4366,7 @@ h2 {
 
 .custom-page-search .search input[type="search"] {
   width: 20em;
+  max-width: 400px;
   height: 4em;
   border: 2px solid var(--color-blue);
   border: #006ab3; /* default supported fallback style */
@@ -4569,7 +4571,7 @@ h2 {
 .custom-card:active {
   background-color: var(--color-grey);
   background-color: #f7f6f6; /* default supported fallback style */
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
   text-decoration: none;
 }
 
