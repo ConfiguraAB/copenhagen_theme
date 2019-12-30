@@ -791,6 +791,7 @@ input[type="submit"][disabled] {
 
 .search-full input[type="search"] {
   border: 1px solid #fff;
+  max-width: 400px;
 }
 
 /***** Hero component *****/
