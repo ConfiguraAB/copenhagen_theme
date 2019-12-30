@@ -136,6 +136,27 @@ var sidebar = new Vue({
   }
 });
 
+document.addEventListener('scroll', function() {
+  var footer = document.getElementById("footer");
+  var sidebar = document.getElementById("sidebar");
+  var sidebarContent = document.getElementById("sidebarContent");
+
+  if (
+    footer.getBoundingClientRect().top - document.documentElement.scrollTop >
+    sidebarContent.getBoundingClientRect().bottom - document.documentElement.scrollTop
+  ) {
+    sidebar.style.position = "fixed";
+    sidebar.style.transition = "0.5s";
+    sidebar.style.width = "15.5rem";
+    sidebar.style.padding = "9.375rem 1.875rem 1.875rem";
+  } else {
+    sidebar.style.position = "fixed";
+    sidebar.style.transition = "0.5s";
+    sidebar.style.width = "0";
+    sidebar.style.padding = "0";
+  }
+})
+
 /**** END SIDEBAR ****/
 
 document.addEventListener('DOMContentLoaded', function() {
