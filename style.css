@@ -5334,6 +5334,8 @@ main.main-sidebar {
 }
 
 .ns-bar .ns-close {
+  position: inherit;
+  display: block;
 	background: transparent;
 	margin-top: 15px;
 	right: 20px;

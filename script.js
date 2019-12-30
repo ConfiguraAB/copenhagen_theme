@@ -441,8 +441,8 @@ $.get(
       '">' +
       item.title +
       "</a>" +
-      item.body +
-      '</p><span class="ns-close"></span></div></div>';
+      item.body.trim() +
+      '</p></div><span class="ns-close"></span></div>';
 
     $(".alertbox").append(style1);
   });
