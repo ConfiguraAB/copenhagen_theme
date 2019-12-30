@@ -424,15 +424,21 @@ ul {
 }
 
 /***** Header *****/
-..header {
+.header {
   margin: 0 auto;
   padding: 0 5%;
   position: relative;
   align-items: center;
-  max-width: 1370px;
   display: flex;
   height: 71px;
   justify-content: space-between;
+}
+
+@media (min-width: 1160px) {
+  .header {
+    padding: 0;
+    width: 90%;
+  }
 }
 
 @media (min-width: 1160px) {
