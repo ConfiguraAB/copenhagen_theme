@@ -98,6 +98,23 @@ h6 {
   }
 }
 
+.logo img {
+  max-height: 28px;
+}
+
+.search input[type="search"] {
+  width: 26.5em;
+  height: 3em;
+  border: 1px solid #006ab3;
+  /* default supported fallback style */
+  border-radius: 0;
+}
+
+.sub-nav {
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
 /***** Alerts *****/
 
 .alert-warning {
