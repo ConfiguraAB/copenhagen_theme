@@ -4127,6 +4127,20 @@ html[lang|="ja"] .search-result-description em {
 }
 
 /***** Overrides *****/
+.article {
+  padding: 0;
+  margin: 0 4rem 0 0;
+}
+
+.article-sidebar {
+  margin-top: 1rem;
+}
+
+.breadcrumbs li + li::before {
+  content: "/";
+  margin: 0 4px;
+}
+
 body {
   font-family: "hannah_banana";
 }
@@ -4158,6 +4172,24 @@ h1, h2, h3, h4, h5, h6 {
 .sub-nav {
   justify-content: space-between;
   padding: 1rem 0;
+}
+
+.sidebar {
+  min-width: 17em;
+}
+
+.sidenav-title {
+  font-size: 15px;
+  position: relative;
+}
+
+.sidenav-item {
+  border-radius: 4px;
+  color: $text_color;
+  display: block;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding: 10px 1rem;
 }
 
 /***** Alerts *****/
