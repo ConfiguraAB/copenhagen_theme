@@ -43,7 +43,7 @@
   <!-- END CUSTOM SIDEBAR -->
 
   <div class="container-divider"></div>
-  <div class="custom-container container">
+  <div class="custom-container container custom-page-search">
     <nav class="sub-nav">
       {{breadcrumbs}}
       {{search submit=false}}
@@ -62,8 +62,62 @@
           <p class="page-header-description">{{section.description}}</p>
           {{/if}}
         </header>
+
         {{#if section.sections}}
+
+        {{#is section.id 360006621153}}
+        <h2>Beginner</h2>
+        <div class="custom-card-container">
+          {{#each section.sections}}
+
+          <section class="custom-card">
+            <a href="{{url}}" class="custom-card-link">
+              <div class="custom-card-logo-container">
+                <i class="material-icons">camera</i>
+              </div>
+              <h3 class="custom-card-title">
+                {{name}}
+              </h3>
+            </a>
+          </section>
+          {{/each}}
+        </div>
+        <h2>Intermediate</h2>
+        <div class="custom-card-container">
+          {{#each section.sections}}
+
+          <section class="custom-card">
+            <a href="{{url}}" class="custom-card-link">
+              <div class="custom-card-logo-container">
+                <i class="material-icons">camera</i>
+              </div>
+              <h3 class="custom-card-title">
+                {{name}}
+              </h3>
+            </a>
+          </section>
+          {{/each}}
+        </div>
+        <h2>Advanced</h2>
+        <div class="custom-card-container">
+          {{#each section.sections}}
+
+          <section class="custom-card">
+            <a href="{{url}}" class="custom-card-link">
+              <div class="custom-card-logo-container">
+                <i class="material-icons">camera</i>
+              </div>
+              <h3 class="custom-card-title">
+                {{name}}
+              </h3>
+            </a>
+          </section>
+          {{/each}}
+        </div>
+        {{else}}
         <div class="custom-section-list section-list section-list--collapsed">
+
+
           {{#each section.sections}}
           <div class="custom-section-list-container">
             <div class="section-list-item">
@@ -95,9 +149,10 @@
           <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true" id="see-all-sections-trigger"
             title="{{t 'see_all_sections'}}">{{t 'see_all_sections'}}</a>
         </div>
-        {{/if}}
+        <<<<<<< HEAD======={{/is}}>>>>>>> [web-4365] Video tutorials page
+          {{/if}}
 
-        {{pagination}}
+          {{pagination}}
 
       </section>
     </div>
