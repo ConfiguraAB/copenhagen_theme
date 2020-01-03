@@ -230,6 +230,11 @@ h2 {
   margin-bottom: 3em;
 }
 
+.custom-card-logo-container .material-icons{
+  color: var(--color-almost-black);
+  color: #424242; /* default supported fallback style */
+}
+
 .custom-button {
   color: var(--color-white);
   color: #ffffff; /* default supported fallback style */
