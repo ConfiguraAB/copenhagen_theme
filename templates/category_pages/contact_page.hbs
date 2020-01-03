@@ -70,21 +70,17 @@
               {{#is id 360006761393}} {{!-- FAQ --}}
                 <a href="https://configura.zendesk.com/hc/en-us/sections/360005929073-FAQ" class="custom-card-link">
               {{else}}
-                {{#is id 360005703433}} {{!-- Chat --}}                                    
-                  <a href="https://www.configura.com/cet/support/chat/support.php" onclick="window.open(this.href+window.location.search.replace('ref1','account').replace('ref2', 'email'),'CETDesignerSupport','resizable=no,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,fullscreen=no,dependent=no,width=404,height=500,status'); return false" class="custom-card-link">
+                {{#is id 360006730714}} {{!-- Call --}}
+                  <a href="https://configura.zendesk.com/hc/en-us/articles/360041358813-Call" class="custom-card-link">
                 {{else}}
-                  {{#is id 360006730714}} {{!-- Call --}}                  
-                    <a href="https://configura.zendesk.com/hc/en-us/articles/360041358813-Call" class="custom-card-link">
+                  {{#is id 360006737154}}
+                    <a href="https://configura.zendesk.com/hc/en-us/articles/360040873234-Manufacturer-Extensions" class="custom-card-link">
                   {{else}}
-                    {{#is id 360006737154}}
-                      <a href="https://configura.zendesk.com/hc/en-us/articles/360040873234-Manufacturer-Extensions" class="custom-card-link">
-                    {{else}}
-                      <a href="{{url}}" class="custom-card-link">
-                    {{/is}}
+                    <a href="{{url}}" class="custom-card-link">
                   {{/is}}
                 {{/is}}
-              {{/is}}              
-            {{/is}}            
+              {{/is}}
+            {{/is}}
               	<div class="custom-card-logo-container">
                   <i class="material-icons">camera</i>
                 </div>
