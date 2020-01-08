@@ -80,6 +80,16 @@ h6 {
   }
 }
 
+.test {
+  flex: auto;
+}
+
+@media (min-width: 1160px) {
+  .test {
+    flex: none;
+  }
+}
+
 /***** Alerts *****/
 
 .alert-warning {
