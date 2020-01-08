@@ -4542,6 +4542,9 @@ h2 {
   .custom-card {
     margin-right: 1em;
   }
+}
+
+@media (min-width: 990px) {
   .custom-contact-card-wrapper.custom-contact-card-left {
     margin-right: auto;
     margin-left: 2.5em;
