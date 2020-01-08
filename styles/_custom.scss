@@ -81,12 +81,14 @@ h6 {
 }
 
 .test {
-  flex: auto;
+  width: 0em;
+  height: 0em;
 }
 
 @media (min-width: 1160px) {
   .test {
-    flex: none;
+    width: 19em;
+    height: 16em;
   }
 }
 

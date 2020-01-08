@@ -4205,7 +4205,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .test {
-  flex: auto;
+  width: 0em;
+  height: 0em;
+}
+
+@media (min-width: 1160px) {
+  .test {
+    width: 19em;
+    height: 16em;
+  }
 }
 
 /***** Alerts *****/
