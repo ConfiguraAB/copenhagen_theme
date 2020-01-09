@@ -72,10 +72,14 @@
                 {{#is id 360006730714}} {{!-- Call --}}
                   <a href="https://configura.zendesk.com/hc/en-us/articles/360041358813-Call" class="custom-card-link">
                 {{else}}
-                  {{#is id 360006737154}}
+                  {{#is id 360006737154}} {{!-- Manufacturer extension --}}
                     <a href="https://configura.zendesk.com/hc/en-us/articles/360040873234-Manufacturer-Extensions" class="custom-card-link">
                   {{else}}
-                    <a href="{{url}}" class="custom-card-link">
+                    {{#is id 360006753914}} {{!-- Chat --}}
+                      <a href="{{url}}" class="custom-card-link" onclick="window.open(this.href+window.location.search.replace('ref1','account').replace('ref2', 'email'),'CETDesignerSupport','resizable=no,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,fullscreen=no,dependent=no,width=404,height=500,status'); return false" >
+                    {{else}}
+                      <a href="{{url}}" class="custom-card-link">
+                    {{/is}}  
                   {{/is}}
                 {{/is}}
               {{/is}}
