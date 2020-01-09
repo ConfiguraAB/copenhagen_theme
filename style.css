@@ -4568,7 +4568,11 @@ h2 {
   padding: 1em;
 }
 
-.custom-text-align-center {
+
+.custom-card:hover,
+.custom-card:focus,
+.custom-card:active {
+
   text-align: center;
 }
 
