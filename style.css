@@ -4261,6 +4261,12 @@ h1, h2, h3, h4, h5, h6 {
   flex: auto;
 }
 
+@media (min-width: 1160px) {
+  .test {
+    flex: none;
+  }
+}
+
 /***** Alerts *****/
 .alert-warning {
   background-color: #ffded9;
@@ -4568,11 +4574,7 @@ h2 {
   padding: 1em;
 }
 
-
-.custom-card:hover,
-.custom-card:focus,
-.custom-card:active {
-
+.custom-text-align-center {
   text-align: center;
 }
 
