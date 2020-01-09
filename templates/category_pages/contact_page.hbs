@@ -87,7 +87,11 @@
               	<div class="custom-card-logo-container">
                   <i class="material-icons">camera</i>
                 </div>
-          			<h3 class="custom-card-title">
+                {{#is id 360006737154}} {{!-- Manufacturer extension --}}
+                  <h3 class="custom-card-title custom-text-align-center">
+                {{else}}
+                  <h3 class="custom-card-title">
+                {{/is}}          			
                 	{{name}}
               	</h3>
               </a>
