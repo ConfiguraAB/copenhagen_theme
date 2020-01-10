@@ -540,6 +540,7 @@ h2 {
 .custom-background-color-blue {
   background-color: var(--color-blue);
   background-color: #006ab3; /* default supported fallback style */
+  z-index: 1;
 }
 
 .custom-header-icon {
@@ -835,15 +836,33 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+$sidebar-width: 300px;
+
 .sidebar-panel {
-  padding: 40px 30px 30px;
-  max-width: 19em;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding: 140px 30px 30px;
+  width: $sidebar-width;
   background: var(--color-grey);
   background: #f7f6f6; /* default supported fallback style */
-  overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
+}
+
+@media (min-width: 768px) {
+  .main-sidebar {
+    padding-left: $sidebar-width;
+  }
+}
+
+@media (max-width: 1160px + $sidebar-width + $sidebar-width) and (min-width: 768px) {
+  .main-sidebar,
+  .main-sidebar+.custom-footer-container {
+    padding-left: $sidebar-width;
+  }
 }
 
 @media (max-width: 768px) {
