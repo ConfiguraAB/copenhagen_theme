@@ -4558,6 +4558,18 @@ a {
   height: 16px;
 }
 
+.custom-hero-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding: 2em;
+}
+
+.custom-hero-banner-info {
+  width: 25rem;
+}
+
 @media (min-width: 768px) {
   .custom-link-container {
     justify-content: center;
@@ -4584,6 +4596,16 @@ a {
   }
   .custom-banner-info {
     text-align: left;
+  }
+  .custom-hero {
+    text-align: inherit;
+  }
+  .custom-hero-banner {
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: flex-start;
+    height: auto;
+    padding: 2em 1.4em;
   }
   .custom-child-with {
     width: 100%;
