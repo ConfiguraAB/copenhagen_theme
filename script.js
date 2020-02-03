@@ -562,11 +562,9 @@ $.get(
 ).done(function(data) {
 	$.each(data.articles, function(index, item) {
 		var style1 =
-			'<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><div class="ns-article"><p class="notification-title-width"><a href="' +
-			item.html_url +
-			'">' +
+			'<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><div class="ns-article"><p class="notification-title-width"><p>' +
 			item.title +
-			"</a>" +
+			"</p>" +
 			'<div class="notification-body-width">' +
 			item.body +
 			"</div></p></div></div></div>";
