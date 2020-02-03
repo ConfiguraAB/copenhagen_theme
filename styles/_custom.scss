@@ -693,7 +693,8 @@ a {
 }
 
 .download-extensions-btn-div {
-  padding-left: 4px;;
+  display: table-cell;
+  padding-left: 4px;
 }
 
 .download-extensions-icon {
@@ -706,11 +707,14 @@ a {
   font-weight: 600;
 }
 
+.download-extensions-link a{
+  padding: 0rem;
+}
+
 .download-extensions-link:hover,
 .download-extensions-link:focus,
 .download-extensions-link:active {
   text-decoration: none;
-  display: flex;
 }
 
 sup > .download-extensions-sup-icon {
