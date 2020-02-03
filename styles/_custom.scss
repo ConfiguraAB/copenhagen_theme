@@ -794,7 +794,6 @@ sup > .ask-community-sup-icon {
   }
 
   .custom-myconfigura-container a {
-    display: flex;
     align-items: center;
   }
 
@@ -809,8 +808,7 @@ sup > .ask-community-sup-icon {
   }
 
   .custom-marketplace-btn-container > [role="button"] {
-    display: table-cell
-    ;
+    display: table-cell;
     border: 1px solid var(--color-white);
     border: 1px solid #ffffff; /* default supported fallback style */
     border-radius: 0;
