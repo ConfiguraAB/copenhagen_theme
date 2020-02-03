@@ -4805,7 +4805,6 @@ a {
 }
 
 .download-extensions-btn-div {
-  display: table-cell;
   padding-left: 4px;
 }
 
@@ -4914,6 +4913,7 @@ sup > .ask-community-sup-icon {
     margin-right: 10px;
   }
   .custom-marketplace-btn-container > [role="button"] {
+    display: table-cell;
     border: 1px solid var(--color-white);
     border: 1px solid #ffffff;
     /* default supported fallback style */
