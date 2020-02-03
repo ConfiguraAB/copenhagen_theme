@@ -4822,6 +4822,7 @@ a {
 .download-extensions-link:focus,
 .download-extensions-link:active {
   text-decoration: none;
+  display: flex;
 }
 
 sup > .download-extensions-sup-icon {
@@ -4904,6 +4905,7 @@ sup > .ask-community-sup-icon {
     position: relative;
   }
   .custom-marketplace-btn-container {
+    padding: 0 0.5rem;
     display: inline-block;
     margin-right: 10px;
   }
@@ -5282,9 +5284,9 @@ main.main-sidebar {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  /* src: url("$assets-materialicons-regular-eot"); */
+  src: url("$assets-materialicons-regular-eot");
   /* For IE6-8 */
-  /* src: local("Material Icons"), local("MaterialIcons-Regular"), url("$assets-materialicons-regular-woff2") format("woff2"), url("$assets-materialicons-regular-woff") format("woff"), url("$assets-materialicons-regular-svg#webfont") format("svg"), url("$assets-materialicons-regular-ttf") format("truetype"); */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("$assets-materialicons-regular-woff2") format("woff2"), url("$assets-materialicons-regular-woff") format("woff"), url("$assets-materialicons-regular-svg#webfont") format("svg"), url("$assets-materialicons-regular-ttf") format("truetype");
 }
 
 .material-icons {

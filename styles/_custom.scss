@@ -710,6 +710,7 @@ a {
 .download-extensions-link:focus,
 .download-extensions-link:active {
   text-decoration: none;
+  display: flex;
 }
 
 sup > .download-extensions-sup-icon {
