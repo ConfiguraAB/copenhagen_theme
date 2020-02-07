@@ -277,12 +277,11 @@ a {
 .trending-div {
   margin-top: 15px;
   @include respond-to(handhelds) { text-align: center; }
-}
-
-.trending-div > a {
-  color: var(--color-black);
-  text-decoration: underline;
-  font-weight: 600;
+  > a {
+    color: var(--color-black);
+    text-decoration: underline;
+    font-weight: 600;
+  }
 }
 
 .custom-logo-container {
@@ -323,12 +322,8 @@ a {
   max-height: 4em;
   width: auto;
   color: var(--color-black);
-  &:hover {
-    background-color: var(--color-white);
-  }
-  &:active {
-    background-color: var(--color-white);
-  }
+  &:hover,
+  &:active,
   &:focus {
     background-color: var(--color-white);
   }
@@ -549,7 +544,6 @@ a {
 }
 
 /****  CUSTOM CARD ****/
-
 .custom-card {
   background-color: var(--color-grey);
   background-color: #f7f6f6; /* default supported fallback style */
@@ -558,53 +552,53 @@ a {
   width: 19em;  
   height: min-content;
   margin-bottom: 2em;
-}
-
-.custom-card-link {
-  display: flex;
-
-  &:hover, &:active, &:focus {
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: var(--color-grey);
+    background-color: #f7f6f6; /* default supported fallback style */
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
     text-decoration: none;
   }
-}
 
-.custom-card-title {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  padding: 1em;
-  text-align: center;
-}
-
-.custom-card:hover,
-.custom-card:focus,
-.custom-card:active {
-  background-color: var(--color-grey);
-  background-color: #f7f6f6; /* default supported fallback style */
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
-  text-decoration: none;
-}
-
-.custom-card-logo-container {
-  background-color: var(--color-white);
-  background-color: #ffffff; /* default supported fallback style */
-  height: 6.9em;
-  padding: 0 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.custom-card-icon {
-  height: 25px;
-  width: 25px;
-}
-
-/* Big screen friendly */
-@media (min-width: 768px) {
-  .custom-card {
-    margin-right: 1em;
+  &-link {
+    display: flex;
+    &:active, &:hover, &:focus {
+      text-decoration: none;
+    }
   }
+
+  &-logo-container {
+    align-items: center;
+    background-color: #ffffff; /* default supported fallback style */
+    background-color: var(--color-white);
+    display: flex;
+    height: 6.9em;
+    justify-content: center;
+    padding: 0 2em;
+  }
+
+  &-icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+  }
+
+  @include respond-to(wide-screens) { margin-right: 1em; }
+}
+
+// /* Big screen friendly */
+@media (min-width: 768px) {
+//   .custom-card {
+//     margin-right: 1em;
+//   }
 
   .custom-contact-card-wrapper.custom-contact-card-left {
     margin-right: auto;
