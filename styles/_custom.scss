@@ -244,31 +244,34 @@ a {
 /**** CUSTOM HOME PAGE ****/
 
 // Search bar
-.custom-page-search input[type="search"] {
-  border-radius: 0;
-  border: #006ab3;
-  border: 2px solid var(--color-blue);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-  font-style: italic;
-  height: 3.5rem;
-  width: 35rem;
-  @include respond-to(handhelds) { width: 90vw; }
-  &:focus {
+.custom-page-search {
+  & input[type="search"] {
     border-radius: 0;
     border: #006ab3;
     border: 2px solid var(--color-blue);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    font-style: italic;
+    height: 3.5rem;
+    width: 35rem;
+    @include respond-to(handhelds) { width: 90vw; }
+    &:focus {
+      border-radius: 0;
+      border: #006ab3;
+      border: 2px solid var(--color-blue);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    }
   }
-}
-
-.custom-page-search-mini input[type="search"] {
-  border-radius: 0;
-  border: #006ab3;
-  border: 2px solid var(--color-blue);
-  font-style: italic;
-  height: 3.5rem;
-  width: 20rem;
-  @include respond-to(handhelds) { width: 95vw; }
+  &-mini {
+    & input[type="search"] {
+      border-radius: 0;
+      border: #006ab3;
+      border: 2px solid var(--color-blue);
+      font-style: italic;
+      height: 3.5rem;
+      width: 20rem;
+      @include respond-to(handhelds) { width: 95vw; }
+    }
+  }
 }
 
 .trending-div {
@@ -1302,32 +1305,32 @@ main.main-sidebar {
     url("$assets-materialicons-regular-ttf") format("truetype");
 }
 
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px; /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+// .material-icons {
+//   font-family: "Material Icons";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-size: 24px; /* Preferred icon size */
+//   display: inline-block;
+//   line-height: 1;
+//   text-transform: none;
+//   letter-spacing: normal;
+//   word-wrap: normal;
+//   white-space: nowrap;
+//   direction: ltr;
 
   /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+  // text-rendering: optimizeLegibility;
 
   /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+  // -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: "liga";
+//   font-feature-settings: "liga";
 
-  vertical-align: top;
-} 
+//   vertical-align: top;
+// } 
 
 .black-icon {
   color: var(--color-almost-black);
