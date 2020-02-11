@@ -128,6 +128,28 @@ $sidebar-width: 300px;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "geogrotesque light";
+  src: local("geogrotesque");
+  src: url("$assets-ge2003-rg-eot");
+  src: url("$assets-ge2003-rg-eot#iefix") format("eot"),
+    url("$assets-ge2003-rg-woff") format("woff"),
+    url("$assets-ge2003-rg-ttf") format("truetype"),
+    url("$assets-ge2003-rg-svg#webfont") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "geogrotesque semibold";
+  src: local("geogrotesque");
+  src: url("$assets-ge2003-rg-eot");
+  src: url("$assets-ge2003-rg-eot#iefix") format("eot"),
+    url("$assets-ge2003-rg-woff") format("woff"),
+    url("$assets-ge2003-rg-ttf") format("truetype"),
+    url("$assets-ge2003-rg-svg#webfont") format("svg");
+  font-style: normal;
+}
+
 :root {
   --color-grey: #f7f6f6;
   --color-white: #ffffff;
@@ -478,12 +500,12 @@ a {
   > h1 {
     @include respond-to(medium-screens) { font-size: 60px; }
     @include respond-to(wide-screens) { font-size: 60px; }
-    font-family: "Geogrotesque Light";
+    font-family: "geogrotesque light";
     font-weight: 400;
     margin-bottom: 0;
     > div {
       display: inline-block;
-      font-family: 'Geogrotesque SemiBold';
+      font-family: 'geogrotesque semibold';
       font-weight: 900;
     }
   }

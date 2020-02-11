@@ -4251,6 +4251,22 @@ html[lang|="ja"] .search-result-description em {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "geogrotesque light";
+  src: local("geogrotesque");
+  src: url("$assets-ge2003-rg-eot");
+  src: url("$assets-ge2003-rg-eot#iefix") format("eot"), url("$assets-ge2003-rg-woff") format("woff"), url("$assets-ge2003-rg-ttf") format("truetype"), url("$assets-ge2003-rg-svg#webfont") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "geogrotesque semibold";
+  src: local("geogrotesque");
+  src: url("$assets-ge2003-rg-eot");
+  src: url("$assets-ge2003-rg-eot#iefix") format("eot"), url("$assets-ge2003-rg-woff") format("woff"), url("$assets-ge2003-rg-ttf") format("truetype"), url("$assets-ge2003-rg-svg#webfont") format("svg");
+  font-style: normal;
+}
+
 :root {
   --color-grey: #f7f6f6;
   --color-white: #ffffff;
@@ -4628,7 +4644,7 @@ a {
 .custom-hero-banner {
   display: flex;
   justify-content: start;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   height: auto;
   padding: 2rem 2rem 2rem 0;
 }
@@ -4660,7 +4676,7 @@ a {
 }
 
 .custom-banner-info > h1 {
-  font-family: "Geogrotesque Light";
+  font-family: "geogrotesque light";
   font-weight: 400;
   margin-bottom: 0;
 }
@@ -4679,7 +4695,7 @@ a {
 
 .custom-banner-info > h1 > div {
   display: inline-block;
-  font-family: 'Geogrotesque SemiBold';
+  font-family: 'geogrotesque semibold';
   font-weight: 900;
 }
 
