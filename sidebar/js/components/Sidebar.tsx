@@ -127,7 +127,12 @@ export default function Sidebar() {
 		return { type: _t[1], id: _t[2] };
 	}
 
-	const categories = data && data.categories;
+	let categories = data && data.categories;
+	const contactUsIndex = categories?.map((c) => c.name).indexOf("Contact Us");
+	if (categories && contactUsIndex) {
+		const contactUs = categories.splice(contactUsIndex, 1);
+		categories.splice(categories.length, 0, contactUs[0]);
+	}
 	const sections = data && data.sections;
 
 	function getCurrentCategory() {
@@ -163,10 +168,6 @@ export default function Sidebar() {
 		if (pageId !== openId) {
 			expand(pageId);
 		}
-	}
-
-	if (document.getElementById("home")) {
-		return <> </>;
 	}
 
 	return (
@@ -236,57 +237,55 @@ export default function Sidebar() {
 				)}
 
 				{categories &&
-					categories
-						.filter((category) => category.name !== "Contact Us")
-						.map((category, index) => {
-							return (
-								<li
-									className={
-										category.id === openId
-											? "sidebar-item open"
-											: "sidebar-item"
-									}
-									key={index}
-									onClick={(e) => {
-										expand(category.id);
-									}}
-								>
-									<h4 className="sidebar-item-title">
-										{category.name}
-									</h4>
-									<ul onClick={(e) => e.stopPropagation()}>
-										{openId === category.id &&
-											sections &&
-											sections
-												.filter(
-													(section) =>
-														section.category_id ===
-															category.id &&
-														!section.parent_section_id
-												)
-												.map((section) => {
-													return (
-														<li key={section.id}>
-															<a
-																href={
-																	section.html_url
-																}
-																className={
-																	section.id ===
-																	openSectionId
-																		? "sidebar-item-link-open"
-																		: "sidebar-item-link"
-																}
-															>
-																{section.name}
-															</a>
-														</li>
-													);
-												})}
-									</ul>
-								</li>
-							);
-						})}
+					categories.map((category, index) => {
+						return (
+							<li
+								className={
+									category.id === openId
+										? "sidebar-item open"
+										: "sidebar-item"
+								}
+								key={index}
+								onClick={(e) => {
+									expand(category.id);
+								}}
+							>
+								<h4 className="sidebar-item-title">
+									{category.name}
+								</h4>
+								<ul onClick={(e) => e.stopPropagation()}>
+									{openId === category.id &&
+										sections &&
+										sections
+											.filter(
+												(section) =>
+													section.category_id ===
+														category.id &&
+													!section.parent_section_id
+											)
+											.map((section) => {
+												return (
+													<li key={section.id}>
+														<a
+															href={
+																section.html_url
+															}
+															className={
+																section.id ===
+																openSectionId
+																	? "sidebar-item-link-open"
+																	: "sidebar-item-link"
+															}
+														>
+															{section.name}
+														</a>
+													</li>
+												);
+											})}
+								</ul>
+							</li>
+						);
+					})}
 			</ul>
 		</div>
 	);
