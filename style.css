@@ -4252,6 +4252,10 @@ html[lang|="ja"] .search-result-description em {
   display: table-row-group;
 }
 
+.article-content td {
+  padding: 5px;
+}
+
 .article-body li > ul {
   list-style-type: circle;
 }
