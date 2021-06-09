@@ -105,6 +105,15 @@
           <div class="article-votes-controls" role='radiogroup'>
             {{vote 'up' role='radio' class='button article-vote article-vote-up'}}
             {{vote 'down' role='radio' class='button article-vote article-vote-down'}}
+            <div class="article-feedback">
+              <p>We're sorry to hear that! Please let us know how we can improve</p>
+                <form onsubmit="submitArticleFeedback(event, {{id}})" id="feedback-form" class="feedback-form" method="post">
+                  <textarea id="feedback-input" class="feedback-input" placeholder="How can we improve?"></textarea>
+                  <input type="submit" value="Submit"></input>
+                </form>
+            </div>
+            <p class="submit-response">
+            </p>
           </div>
           <small class="article-votes-count">
             {{vote 'label' class='article-vote-label'}}
@@ -233,3 +242,42 @@
 
   </div>
 </div>
+
+<script>
+
+  function submitArticleFeedback(event){
+    event.preventDefault();
+
+    const message = $('.feedback-input').val();
+    const articleUrl = event.target.action;
+    const postData = `{"article": "${articleUrl}", "content":"${message}"}`;
+    $.ajax({
+      contentType: 'application/json',
+      dataType: 'json',
+      type: 'POST',
+      crossDomain: true,
+      url: 'https://www.dev.configura.com/api/v3/zendesk/submit-feedback',
+      data: postData,
+      success: function(data, response){
+        $('.article-feedback').hide();
+        $('.submit-response').text("Thank you for caring!").show(300);
+        console.log(data, response);
+        setTimeout( function(){
+          $('.submit-response').hide(300)
+        }, 2000);
+      },
+      error: function(){
+        $('.article-feedback').hide();
+        $('.submit-response').text("Something went wrong!").css("color", "red").show(300);
+        setTimeout( function(){
+          $('.submit-response').hide(300)
+        }, 2000);
+      }
+    })
+  }
+
+  $('.article-vote-down').on('click', function(){
+    $('.article-feedback').show(300);
+  });
+
+</script>

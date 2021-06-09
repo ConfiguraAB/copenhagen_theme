@@ -1508,6 +1508,18 @@ ul {
   content: "\2715";
 }
 
+.article-feedback {
+  display: none;
+}
+
+.submit-response {
+  display: none;
+}
+
+.feedback-input {
+  height: 10rem;
+}
+
 .article-more-questions {
   margin: 10px 0 20px;
   text-align: center;
