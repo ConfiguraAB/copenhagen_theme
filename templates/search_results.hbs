@@ -2,7 +2,23 @@
 <div class="container">
     <nav class="sub-nav custom-page-search-mini">
       {{breadcrumbs}}
-      {{search scoped=true submit=false}}
+      {{search scoped=true submit=false}} 
+      <script>
+        $( document ).ready(function() {
+          var searchParams = new URLSearchParams(window.location.search);
+          var categoryId = searchParams.get('category');
+          var firstBreadcrumb = $(".breadcrumbs > li:nth-child(1)");
+          
+          var presetCategories = {
+            "360001452494": "CET", 
+            "360003927054": "CET Developer",
+            "360001609774": "Catalogues",
+            "360001609754": "360001609754"
+          };
+          
+          firstBreadcrumb.after("<li title=\"CET\"><a href=\"/hc/en-us/categories/"+categoryId+"\">"+presetCategories[categoryId]+"</a></li>");
+        });
+      </script>     
     </nav>
 
   <header class="page-header">
