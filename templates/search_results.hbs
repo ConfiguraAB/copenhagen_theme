@@ -1,25 +1,37 @@
 <div class="container-divider"></div>
 <div class="container">
-    <nav class="sub-nav custom-page-search-mini">
-      {{breadcrumbs}}
-      {{search scoped=true submit=false}} 
-      <script>
-        $( document ).ready(function() {
-          var searchParams = new URLSearchParams(window.location.search);
-          var categoryId = searchParams.get('category');
-          var firstBreadcrumb = $(".breadcrumbs > li:nth-child(1)");
+  <nav class="sub-nav custom-page-search-mini">
+    {{breadcrumbs}}
+    {{search scoped=true submit=false}} 
+    <script>
+      $( document ).ready(function() {  
+        function getParam(n) {
+          var v = window.location.search.substring(1).split("&");
+          for (var i = 0; i < v.length; i++) {
+            var p = v[i].split("=");
+            if (p[0] == n) {
+              return decodeURIComponent(p[1]);
+            }
+          }
+          return "";
+        }
+
+        var categoryId = getParam('category');   
+        if (categoryId != "") {
+          var firstBreadcrumb = $(".custom-page-search-mini > .breadcrumbs > li:nth-child(1)");
           
           var presetCategories = {
             "360001452494": "CET", 
             "360003927054": "CET Developer",
             "360001609774": "Catalogues",
-            "360001609754": "360001609754"
+            "360001609754": "MyConfigura"
           };
           
           firstBreadcrumb.after("<li title=\"CET\"><a href=\"/hc/en-us/categories/"+categoryId+"\">"+presetCategories[categoryId]+"</a></li>");
-        });
-      </script>     
-    </nav>
+        }   
+      });
+    </script>     
+  </nav>
 
   <header class="page-header">
     <h1>{{t 'search_results'}}</h1>
