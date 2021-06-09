@@ -7,12 +7,14 @@
       $( document ).ready(function() {  
         function getParam(n) {
           var v = window.location.search.substring(1).split("&");
+
           for (var i = 0; i < v.length; i++) {
             var p = v[i].split("=");
             if (p[0] == n) {
               return decodeURIComponent(p[1]);
             }
           }
+
           return "";
         }
 
@@ -30,7 +32,7 @@
           firstBreadcrumb.after("<li title=\"CET\"><a href=\"/hc/en-us/categories/"+categoryId+"\">"+presetCategories[categoryId]+"</a></li>");
         }   
       });
-    </script>     
+    </script>  
   </nav>
 
   <header class="page-header">
