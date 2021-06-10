@@ -9,8 +9,8 @@
           var v = window.location.search.substring(1).split("&");
 
           for (var i = 0; i < v.length; i++) {
-            var p = v[i].split("=");
-            if (p[0] == n) {
+            var p = v[i].split("=", 2);
+            if (p[0] === n) {
               return decodeURIComponent(p[1]);
             }
           }
@@ -19,7 +19,7 @@
         }
 
         var categoryId = getParam('category');   
-        if (categoryId != "") {
+        if (categoryId !== "") {
           var firstBreadcrumb = $(".custom-page-search-mini > .breadcrumbs > li:nth-child(1)");
           
           var presetCategories = {
@@ -28,8 +28,10 @@
             "360001609774": "Catalogues",
             "360001609754": "MyConfigura"
           };
-          
-          firstBreadcrumb.after("<li title=\"CET\"><a href=\"/hc/en-us/categories/"+categoryId+"\">"+presetCategories[categoryId]+"</a></li>");
+
+          if (presetCategories[categoryId] !== undefined) {
+            firstBreadcrumb.after("<li title=\"CET\"><a href=\"/hc/en-us/categories/"+categoryId+"\">"+presetCategories[categoryId]+"</a></li>");
+          }
         }   
       });
     </script>  
