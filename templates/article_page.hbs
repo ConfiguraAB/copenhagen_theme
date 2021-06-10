@@ -106,7 +106,7 @@
             {{vote 'up' role='radio' class='button article-vote article-vote-up'}}
             {{vote 'down' role='radio' class='button article-vote article-vote-down'}}
             <div class="article-feedback">
-              <p>We're sorry to hear that! Please let us know how we can improve</p>
+              <p class="feedback-instruction"></p>
                 <form onsubmit="submitArticleFeedback(event, {{id}})" id="feedback-form" class="feedback-form" method="post">
                   <textarea id="feedback-input" class="feedback-input" placeholder="How can we improve?"></textarea>
                   <input type="submit" value="Submit"></input>
@@ -244,7 +244,6 @@
 </div>
 
 <script>
-
   function submitArticleFeedback(event){
     event.preventDefault();
 
@@ -258,26 +257,32 @@
       crossDomain: true,
       url: 'https://www.dev.configura.com/api/v3/zendesk/submit-feedback',
       data: postData,
+
       success: function(data, response){
-        $('.article-feedback').hide();
-        $('.submit-response').text("Thank you for caring!").show(300);
-        console.log(data, response);
-        setTimeout( function(){
-          $('.submit-response').hide(300)
-        }, 2000);
+        if ( data.error ) {
+          $('.feedback-instruction').text(data.error).css('color', 'red');
+          return;
+        }
+        $('.feedback-instruction').removeAttr('style');
+        $('.article-feedback').hide(); 
+        $('.submit-response').text(data.success).show(300)
+          setTimeout( function(){
+            $('.submit-response').hide(300)
+          }, 2000);
       },
+
       error: function(){
         $('.article-feedback').hide();
         $('.submit-response').text("Something went wrong!").css("color", "red").show(300);
-        setTimeout( function(){
-          $('.submit-response').hide(300)
-        }, 2000);
+          setTimeout( function(){
+            $('.submit-response').hide(300)
+          }, 2000);
       }
     })
   }
 
   $('.article-vote-down').on('click', function(){
+    $('.feedback-instruction').text('We are sorry to hear that! Please let us know how we can improve');
     $('.article-feedback').show(300);
   });
-
 </script>
