@@ -13,191 +13,317 @@
             <h2>Contact us</h2>
         </span>
     </header>
-      <!-- CUSTOM CARDS -->
+      <!-- SUPPORT CONTACT CARDS -->
     <div class="custom-card-container">
     {{#each section.sections}}
-    <div class="custom-contact-card-wrapper">
-         <section class="custom-card small-card">
-                {{#is id 1500002293041}} {{!-- User Support Email --}}
-                    <a href="mailto:cetsupport@configura" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002506442}} {{!-- Dev Support Email --}}
-                    <a href="mailto:devsupport@configura" class="custom-card-link">
-                {{else}}
-                 {{#is id 1500002507302}} {{!-- QA Support Email --}}
-                    <a href="mailto:devsupport@configura" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002293841}} {{!-- Chat --}}
-                    <a href="https://www.configura.com/support/chat" class="custom-card-link"
-                    onclick="window.open(this.href+window.location.search.replace('ref1','account').replace('ref2', 'email'),'CETDesignerSupport','resizable=no,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,fullscreen=no,dependent=no,width=404,height=500,status'); return false">
-                {{else}}
-                {{#is id 1500002293861}} {{!-- Call --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/360041358813" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002273242}} {{!-- User Forums --}}
-                    <a href="https://www.configura.com/my/forum" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002506482}} {{!-- Dev Forums --}}
-                    <a href="https://www.configura.com/my/forum" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002507322}} {{!-- QA Forums --}}
-                    <a href="https://www.configura.com/my/forum" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002293921}} {{!-- User Global Support Availability --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/360056184914" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002534721}} {{!-- Dev Global Support Availability --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/360056184914" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002535581}} {{!-- QA Global Support Availability --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/360056184914" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002293941}} {{!-- Manufacturer Extension Support --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/360040873234" class="custom-card-link">
-                {{else}}
+        {{!!-- Hides Quick Link Cards --}}
+        {{#isnt id 1500002293961}}
+        {{#isnt id 1500002273282}}
+        {{#isnt id 1500002506502}}
+        {{#isnt id 1500002506522}}
+        {{#isnt id 1500002534741}}
+        {{#isnt id 1500002507382}}
+        {{#isnt id 1500002535641}}
+        {{#isnt id 1500002508222}}
+        <div class="custom-contact-card-wrapper">
+            <section class="custom-card small-card">
+
+                    {{!-- User Support Section --}}
+
+                    {{#is id 1500002293041}} {{!-- User Email --}}
+                        <a href="mailto:cetsupport@configura" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">textsms</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002293841}} {{!-- Chat --}}
+                        <a href="https://www.configura.com/support/chat" class="custom-card-link"
+                        onclick="window.open(this.href+window.location.search.replace('ref1','account').replace('ref2', 'email'),'CETDesignerSupport','resizable=no,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,fullscreen=no,dependent=no,width=404,height=500,status'); return false">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">textsms</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002293861}} {{!-- Call --}}
+                        <a href="https://support.configura.com/hc/en-us/articles/360041358813" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">call</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002273242}} {{!-- User Forums --}}
+                        <a href="https://www.configura.com/my/forum" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">forum</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002293921}} {{!-- User Global Support Availability --}}
+                        <a href="https://support.configura.com/hc/en-us/articles/360056184914" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">access_time</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002293941}} {{!-- Manufacturer Extension Support --}}
+                        <a href="https://support.configura.com/hc/en-us/articles/360040873234" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">business</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+
+                    {{!-- Dev Support Section --}}
+
+                    {{#is id 1500002506442}} {{!-- Dev Contact Support --}}
+                        <a href="https://jira.configura.com/servicedesk/customer/portal/4" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">textsms</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002506482}} {{!-- Dev Community --}}
+                        <a href="https://my.configura.com/index.pl?page=forum§ion=developer&subsection=devs" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">forum</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002611922}} {{!-- Book Consultation --}}
+                        <a href="https://cetdevsupport.as.me/schedule.php" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">access_time</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+
+                    {{!-- QA Support Section --}}
+
+                    {{#is id 1500002507302}} {{!-- QA Email --}}
+                        <a href="mailto:qasupport@configura" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">textsms</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002507322}} {{!-- QA Community --}}
+                        <a href="https://my.configura.com/index.pl?page=forum§ion=support&subsection=qa" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">forum</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{else}}
+                    {{#is id 1500002535581}} {{!-- QA Global Support Availability --}}
+                        <a href="https://support.configura.com/hc/en-us/articles/360056184914" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">access_time</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+                    {{/is}}
+            </section>
+            {{#is id 1500002293041}} {{!-- Email --}}
+                <p>Email us at <a href="mailto:cetsupport@configura.com">cetsupport@configura.com</a> to report an issue or to get help. We will respond to all enquiries within 16 hours.</p>
+            {{else}}
+            {{#is id 1500002506442}} {{!-- Dev Support Email --}}
+                <p>Please contact us via the CET Developer Support portal. Alternatively, you may email us at <a href="mailto:devsupport@configura.com">devsupport@configura.com</a>. We will respond to all enquiries within 16 hours.</p>
+            {{else}}
+            {{#is id 1500002507302}} {{!-- QA Support Email --}}
+                <p>Email us at <a href="mailto:qasupport@configura.com">qasupport@configura.com</a> to report an issue or to get help. We will get back to you as quickly as possible.</p>
+            {{else}}
+                <p>{{description}}</p>
+            {{/is}}
+            {{/is}}
+            {{/is}}
+        </div>
+        {{/isnt}}
+        {{/isnt}}
+        {{/isnt}}
+        {{/isnt}}
+        {{/isnt}}
+        {{/isnt}}
+        {{/isnt}}
+        {{/isnt}}
+    {{/each}}
+    </div>
+
+     <!-- QUICK LINKS CARDS -->
+    <h2>Quick Links</h2>
+    <div class="custom-card-container">
+    {{#each section.sections}}
+        {{!-- Hides Support Contact Cards --}}
+        {{#isnt id 1500002293041}}
+        {{#isnt id 1500002293841}}
+        {{#isnt id 1500002293861}}
+        {{#isnt id 1500002273242}}
+        {{#isnt id 1500002293921}}
+        {{#isnt id 1500002293941}}
+        {{#isnt id 1500002506442}}
+        {{#isnt id 1500002506482}}
+        {{#isnt id 1500002534721}}
+        {{#isnt id 1500002507302}}
+        {{#isnt id 1500002507322}}
+        {{#isnt id 1500002535581}}
+        {{#isnt id 1500002611922}}
+        <div class="custom-contact-card-wrapper">
+            <section class="custom-card small-card">
+
+                 {{!-- User Support Quick Links --}}
+
                 {{#is id 1500002293961}} {{!-- User FAQs --}}
                     <a href="https://support.configura.com/hc/en-us/sections/360003354354-FAQ" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002506502}} {{!-- Dev FAQs --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/360003354354-FAQ" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002507382}} {{!-- QA FAQs --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/360003354354-FAQ" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002273282}} {{!-- User Migration Guide --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002506522}} {{!-- Dev Migration Guide --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002535641}} {{!-- QA Migration Guide --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002534741}} {{!-- Dev Release Timeline --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/1500012755202" class="custom-card-link">
-                {{else}}
-                {{#is id 1500002508222}} {{!-- QA Release Timeline --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/1500012755202" class="custom-card-link">
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                {{/is}}
-                    <div class="custom-card-logo-container">
-                        {{#is id 1500002293041}} {{!-- User Support Email --}}
-                            <i class="material-icons black-icon">textsms</i>
-                        {{else}}
-                        {{#is id 1500002506442}} {{!-- Dev Support Email --}}
-                            <i class="material-icons black-icon">textsms</i>
-                        {{else}}
-                        {{#is id 1500002507302}} {{!-- QA Support Email --}}
-                            <i class="material-icons black-icon">textsms</i>
-                        {{else}}
-                        {{#is id 1500002293841}} {{!-- Chat --}}
-                            <i class="material-icons black-icon">textsms</i>
-                        {{else}}
-                        {{#is id 1500002293861}} {{!-- Call --}}
-                            <i class="material-icons black-icon">call</i>
-                        {{else}}
-                        {{#is id 1500002273242}} {{!-- User Forums --}}
-                            <i class="material-icons black-icon">forum</i>
-                        {{else}}
-                        {{#is id 1500002506482}} {{!-- Dev Forums --}}
-                            <i class="material-icons black-icon">forum</i>
-                        {{else}}
-                        {{#is id 1500002507322}} {{!-- QA Forums --}}
-                            <i class="material-icons black-icon">forum</i>
-                        {{else}}
-                        {{#is id 1500002293921}} {{!-- User Global Support Availability --}}
+                        <div class="custom-card-logo-container">
                             <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002534721}} {{!-- Dev Global Support Availability --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002535581}} {{!-- QA Global Support Availability --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002293941}} {{!-- Manufacturer Extension Support --}}
-                            <i class="material-icons black-icon">business</i>
-                        {{else}}
-                        {{#is id 1500002293961}} {{!-- User FAQs --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002506502}} {{!-- Dev FAQs --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002507382}} {{!-- QA FAQs --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002273282}} {{!-- User Migration Guide --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002506522}} {{!-- Dev Migration Guide --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002535641}} {{!-- QA Migration Guide --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002534741}} {{!-- Dev Release Timeline --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{else}}
-                        {{#is id 1500002508222}} {{!-- QA Release Timeline --}}
-                            <i class="material-icons black-icon">access_time</i>
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                        {{/is}}
-                    </div>
+                        </div>
                         <h3 class="custom-card-title">
                             {{name}}
                         </h3>
                     </a>
+                {{else}}
+                {{#is id 1500002273282}} {{!-- User Migration Guide --}}
+                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{else}}
+
+                {{!-- Dev Support Quick Links --}}
+
+                {{#is id 1500002506502}} {{!-- Dev Help Center --}}
+                    <a href="https://support.configura.com/hc/en-us/sections/360003354354-FAQ" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{else}}
+                {{#is id 1500002506522}} {{!-- Dev Migration Guide --}}
+                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{else}}
+                {{#is id 1500002534741}} {{!-- Dev Release Timeline --}}
+                    <a href="https://support.configura.com/hc/en-us/articles/1500012755202" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{else}}
+
+                {{!-- QA Support Quick Links --}}
+
+                {{#is id 1500002507382}} {{!-- QA FAQs --}}
+                    <a href="https://support.configura.com/hc/en-us/sections/360003354354-FAQ" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{else}}
+                {{#is id 1500002535641 }} {{!-- QA Migration Guide --}}
+                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{else}}
+                {{#is id 1500002508222 }} {{!-- QA Release Timeline --}}
+                    <a href="https://support.configura.com/hc/en-us/articles/1500012755202" class="custom-card-link">
+                        <div class="custom-card-logo-container">
+                            <i class="material-icons black-icon">access_time</i>
+                        </div>
+                        <h3 class="custom-card-title">
+                            {{name}}
+                        </h3>
+                    </a>
+                {{/is}}
+                {{/is}}
+                {{/is}}
+                {{/is}}
+                {{/is}}
+                {{/is}}
+                {{/is}}
+                {{/is}}
         </section>
-        {{#is id 1500002293041}} {{!-- Email --}}
-            <p>Email us at <a href="mailto:cetsupport@configura.com">cetsupport@configura.com</a> to report an issue or to get help. We will respons to all enquiries within 16 hours.</p>
-        {{else}}
-        {{#is id 1500002506442}} {{!-- Dev Support Email --}}
-            <p>Email us at <a href="mailto:devsupport@configura.com">devsupport@configura.com</a> to report an issue or to get help. We will respons to all enquiries within 16 hours.</p>
-        {{else}}
-        {{#is id 1500002507302}} {{!-- QA Support Email --}}
-            <p>Email us at <a href="mailto:devsupport@configura.com">devsupport@configura.com</a> to report an issue or to get help. We will respons to all enquiries within 16 hours.</p>
-        {{else}}
-            <p>{{description}}</p>
-        {{/is}}
-        {{/is}}
-        {{/is}}
     </div>
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
+    {{/isnt}}
     {{/each}}
-    </div>
 </div>
