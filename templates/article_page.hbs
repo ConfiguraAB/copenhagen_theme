@@ -265,18 +265,12 @@
         }
         $('.feedback-instruction').removeAttr('style');
         $('.article-feedback').hide(); 
-        $('.submit-response').text(data.success).show(300)
-          setTimeout( function(){
-            $('.submit-response').hide(300)
-          }, 2000);
+        $('.submit-response').text(data.success).show(300);
       },
 
       error: function(){
         $('.article-feedback').hide();
         $('.submit-response').text("Something went wrong!").css("color", "red").show(300);
-          setTimeout( function(){
-            $('.submit-response').hide(300)
-          }, 2000);
       }
     })
   }
