@@ -27,7 +27,6 @@
         {{#isnt id 1500002508222}}
         <div class="custom-contact-card-wrapper">
             <section class="custom-card small-card">
-
                     {{!-- User Support Section --}}
 
                     {{#is id 1500002293041}} {{!-- User Email --}}
@@ -91,6 +90,26 @@
                             </h3>
                         </a>
                     {{/is}}
+                    {{#is id 1500002912642 }} {{!-- Academy --}}
+                        <a href="https://www.configura.com/academy/cet" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">business</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{/is}}
+                    {{#is id 1500002912602 }} {{!-- CET Experience --}}
+                        <a href="https://www.cetexperience.com/" class="custom-card-link">
+                            <div class="custom-card-logo-container">
+                                <i class="material-icons black-icon">business</i>
+                            </div>
+                            <h3 class="custom-card-title">
+                                {{name}}
+                            </h3>
+                        </a>
+                    {{/is}}
 
                     {{!-- Dev Support Section --}}
 
@@ -105,7 +124,7 @@
                         </a>
                     {{/is}}
                     {{#is id 1500002506482}} {{!-- Dev Community --}}
-                        <a href="https://my.configura.com/index.pl?page=forum§ion=developer&subsection=devs" class="custom-card-link">
+                        <a href="https://my.configura.com/index.pl?page=forum&section=developer&subsection=devs" class="custom-card-link">
                             <div class="custom-card-logo-container">
                                 <i class="material-icons black-icon">forum</i>
                             </div>
@@ -138,7 +157,7 @@
                         </a>
                     {{/is}}
                     {{#is id 1500002507322}} {{!-- QA Community --}}
-                        <a href="https://my.configura.com/index.pl?page=forum§ion=support&subsection=qa" class="custom-card-link">
+                        <a href="https://my.configura.com/index.pl?page=forum&section=support&subsection=qa" class="custom-card-link">
                             <div class="custom-card-logo-container">
                                 <i class="material-icons black-icon">forum</i>
                             </div>
@@ -168,7 +187,6 @@
                 <p>Email us at <a href="mailto:qasupport@configura.com">qasupport@configura.com</a> to report an issue or to get help. We will get back to you as quickly as possible.</p>
             {{/is}}
                 <p>{{description}}</p>
-            {{/is}}
         </div>
         {{/isnt}}
         {{/isnt}}
@@ -199,6 +217,8 @@
         {{#isnt id 1500002507322}}
         {{#isnt id 1500002535581}}
         {{#isnt id 1500002611922}}
+        {{#isnt id 1500002912642}}
+        {{#isnt id 1500002912602}}
         <div class="custom-contact-card-wrapper">
             <section class="custom-card small-card">
 
@@ -228,7 +248,7 @@
                 {{!-- Dev Support Quick Links --}}
 
                 {{#is id 1500002506502}} {{!-- Dev Help Center --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/360003354354-FAQ" class="custom-card-link">
+                    <a href="https://support.configura.com/hc/en-us/categories/360003927054-CET-Developer" class="custom-card-link">
                         <div class="custom-card-logo-container">
                             <i class="material-icons black-icon">access_time</i>
                         </div>
@@ -238,7 +258,7 @@
                     </a>
                 {{/is}}
                 {{#is id 1500002506522}} {{!-- Dev Migration Guide --}}
-                    <a href="https://support.configura.com/hc/en-us/sections/1500000170842-Migration-Testing-Guides" class="custom-card-link">
+                    <a href="https://www.configura.com/wiki/index.php/Migration_Guides" class="custom-card-link">
                         <div class="custom-card-logo-container">
                             <i class="material-icons black-icon">access_time</i>
                         </div>
@@ -248,7 +268,7 @@
                     </a>
                 {{/is}}
                 {{#is id 1500002534741}} {{!-- Dev Release Timeline --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/1500012755202" class="custom-card-link">
+                    <a href="https://support.configura.com/hc/en-us/sections/1500000538981-Release-Timelines" class="custom-card-link">
                         <div class="custom-card-logo-container">
                             <i class="material-icons black-icon">access_time</i>
                         </div>
@@ -281,7 +301,7 @@
                     </a>
                 {{/is}}
                 {{#is id 1500002508222 }} {{!-- QA Release Timeline --}}
-                    <a href="https://support.configura.com/hc/en-us/articles/1500012755202" class="custom-card-link">
+                    <a href="https://support.configura.com/hc/en-us/sections/1500000538981-Release-Timelines" class="custom-card-link">
                         <div class="custom-card-logo-container">
                             <i class="material-icons black-icon">access_time</i>
                         </div>
@@ -292,6 +312,8 @@
                 {{/is}}
         </section>
     </div>
+    {{/isnt}}
+    {{/isnt}}
     {{/isnt}}
     {{/isnt}}
     {{/isnt}}
