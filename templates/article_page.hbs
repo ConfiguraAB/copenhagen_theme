@@ -247,17 +247,17 @@
   (function() {
     $('.feedback-form').on('submit', function(event) {
       event.preventDefault();
-      const message = $('.feedback-input').val();
-      const articleUrl = event.target.action;
-      const postData = `{"articleUrl": "${articleUrl}", "content":"${message}"}`;
+
+      const postData = {
+        articleUrl: event.target.action,
+        content: $('.feedback-input').val()
+      }
 
       $.ajax({
-        contentType: 'application/json',
-        dataType: 'json',
         type: 'POST',
         crossDomain: true,
         url: 'https://www.dev.configura.com/api/v3/zendesk/submit-feedback',
-        data: postData,
+        data: JSON.stringify(postData),
 
         success: function(data, response){
           if ( data.error ) {
