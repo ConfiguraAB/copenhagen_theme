@@ -20,6 +20,7 @@
         <ul class="custom-blocks-list blocks-list">
           {{#each categories}}
           {{#isnt id 360002370413}}
+          {{#isnt id 1500001668021}}
           <li class="custom-blocks-item">
             <a href='{{url}}' class="blocks-item-link">
 
@@ -46,6 +47,7 @@
               <a class="custom-blocks-item-browse-button" href='{{url}}'>{{dc 'text_browse'}}...</a>
             </a>
           </li>
+          {{/isnt}}
           {{/isnt}}
           {{/each}}
         </ul>
