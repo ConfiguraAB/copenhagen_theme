@@ -1508,6 +1508,18 @@ ul {
   content: "\2715";
 }
 
+.article-feedback {
+  display: none;
+}
+
+.submit-response {
+  display: none;
+}
+
+.feedback-input {
+  height: 10rem;
+}
+
 .article-more-questions {
   margin: 10px 0 20px;
   text-align: center;
@@ -4238,6 +4250,10 @@ html[lang|="ja"] .search-result-description em {
 
 .article-content table {
   display: table-row-group;
+}
+
+.article-content td {
+  padding: 5px;
 }
 
 .article-body li > ul {
