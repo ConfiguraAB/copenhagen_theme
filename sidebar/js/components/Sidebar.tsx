@@ -237,7 +237,7 @@ export default function Sidebar() {
 
 				{categories &&
 					categories
-						.filter((category) => category.name !== "Contact Us (Old)")
+						.filter((category) => !(category.name == "Contact Us (Old)" || category.name == "Contact Us"))
 						.map((category, index) => {
 							return (
 								<li
